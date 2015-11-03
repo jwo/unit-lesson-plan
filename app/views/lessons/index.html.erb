@@ -1,11 +1,26 @@
 <div class="page-title">
   <h1>Lessons</h1>
 </div>
-<div class="well">
-  <div class="text-right">
-    <%= link_to "New Lesson", new_lesson_path, class: "btn btn-default" %>
+
+
+
+<% @units.each do |unit| %>
+  <h2><%= unit.name %></h2>
+  <div class="unit-list">
+    <% unit.lessons.each do |lesson| %>
+    <div class="unit">
+      <div class="">
+        <%= lesson.title %>
+      </div>
+      <div class="">
+        <%= lesson.lesson_order %>
+      </div>
+      <div class="">
+        <%= link_to "Edit", [:edit, lesson], class: "btn btn-default"  %>
+        <%= link_to "Destroy", lesson, method: :delete, class: "btn btn-danger", data: {confirm: "Sure?"} %>
+      </div>
+    </div>
+    <% end %>
   </div>
-</div>
-
-
-<%= render @lessons %>
+  <hr>
+<% end %>

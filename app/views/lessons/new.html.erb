@@ -1,9 +1,2 @@
 <h1>Lessons#new</h1>
-<%= simple_form_for @lesson do |f| %>
-  <%= f.association :unit %>
-  <%= f.input :title %>
-  <%= f.input :lesson_ids, as: :check_boxes, collection: Lesson.all %>
-  <%= f.input :lesson_order %>
-  <%= f.input :body %>
-  <%= f.submit class: "btn btn-primary" %>
-<% end %>
+<%= render partial: 'form' %>
