@@ -1,0 +1,6 @@
+<h3><%= lesson.title %></h3>
+<ul>
+<% lesson.lessons.each do |lesson| %>
+  <li><%= render lesson %></li>
+<% end %>
+</ul>

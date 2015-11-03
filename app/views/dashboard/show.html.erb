@@ -1,0 +1,9 @@
+<h1>Learn Git</h1>
+
+
+<% @units.each do |unit| %>
+  <h2><%= unit.name %></h2>
+  <% unit.lessons.top.each do |lesson| %>
+    <%= render lesson %>
+  <% end %>
+<% end %>

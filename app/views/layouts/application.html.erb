@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LearnGit</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Units", units_path %></li>
+      <li><%= link_to "Lessons", lessons_path %></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+</body>
+</html>

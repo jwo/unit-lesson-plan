@@ -1,0 +1,15 @@
+.unit-list {
+  border: 1px solid #ccc;
+  margin: 1em 0;
+  .unit {
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    &:nth-child(odd) {
+      background: #ccc;
+    }
+    div {
+      flex: 1;
+    }
+  }
+}

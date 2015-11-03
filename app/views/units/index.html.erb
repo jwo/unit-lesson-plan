@@ -1,0 +1,25 @@
+<div class="page-title">
+  <h1>Units</h1>
+</div>
+<div class="well">
+  <div class="text-right">
+    <%= link_to "New Unit", new_unit_path, class: "btn btn-default" %>
+  </div>
+</div>
+
+<div class="unit-list">
+  <% @units.each do |unit| %>
+    <div class="unit">
+      <div class="">
+        <%= unit.name %>
+      </div>
+      <div class="">
+        <%= unit.unit_order %>
+      </div>
+      <div class="">
+        <%= link_to "Edit", [:edit, unit], class: "btn btn-default" %>
+      </div>
+    </div>
+  <% end %>
+
+</div>
