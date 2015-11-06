@@ -6,14 +6,11 @@
 
 <% @units.each do |unit| %>
   <h2><%= unit.name %></h2>
-  <div class="unit-list">
-    <% unit.lessons.each do |lesson| %>
-    <div class="unit">
+  <div class="unit-list sortable">
+    <% sortable_fetch(unit.lessons) do |lesson, id_tag| %>
+    <div class="unit" id="<%=id_tag%>">
       <div class="">
         <%= lesson.title %>
-      </div>
-      <div class="">
-        <%= lesson.lesson_order %>
       </div>
       <div class="">
         <%= link_to "Edit", [:edit, lesson], class: "btn btn-default"  %>

@@ -1,8 +1,8 @@
 <%= simple_form_for @lesson do |f| %>
-  <%= f.association :unit %>
+  <%= f.association :unit, collection: Unit.all.ordered %>
   <%= f.input :title %>
-  <%= f.input :lesson_ids, as: :check_boxes, collection: Lesson.all %>
-  <%= f.input :lesson_order %>
+  <%= f.input :lesson_ids, as: :check_boxes, collection: Lesson.ordered, label_method: "full" %>
+  <%= f.input :sort %>
   <%= f.input :body %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>

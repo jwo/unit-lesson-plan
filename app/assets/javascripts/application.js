@@ -16,4 +16,6 @@
 //= require react
 //= require react_ujs
 //= require components
+//= require jquery-ui/sortable.js
+//= require rails_sortable
 //= require_tree .

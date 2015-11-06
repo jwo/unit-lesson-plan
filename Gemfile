@@ -48,3 +48,5 @@ end
 gem 'react-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'jquery-ui-rails' 
+gem 'rails_sortable'
